@@ -21,10 +21,10 @@ export function Header() {
     const [isOpen, setIsOpen] = useState(false)
 
     return (
-        <header className="sticky top-0 z-50 w-full border-b border-[var(--gdfa-primary)/10] bg-[var(--gdfa-neutral-white)/90] backdrop-blur supports-[backdrop-filter]:bg-[var(--gdfa-neutral-white)/70] flex justify-center">
+        <header className="sticky top-0 z-50 w-full border-b border-[var(--gdfa-primary)/10] bg-[var(--gdfa-neutral-white)/90] backdrop-blur-md supports-[backdrop-filter]:bg-[var(--gdfa-neutral-white)]/40 flex justify-center">
             <div className="container flex h-16 items-center justify-between px-4">
                 <Image
-                    src="/logo.png"
+                    src="/logo.svg"
                     alt="GDFA Logo"
                     width={80}
                     height={80}
@@ -45,13 +45,13 @@ export function Header() {
                 </nav>
 
                 <div className="hidden md:flex items-center space-x-4">
-                    {/*<Button*/}
+                    {/* <Button*/}
                     {/*    variant="outline"*/}
                     {/*    size="sm"*/}
                     {/*    className="border-[var(--gdfa-secondary)] text-[var(--gdfa-secondary)] hover:bg-[var(--gdfa-secondary)/10]"*/}
                     {/*>*/}
                     {/*    Login*/}
-                    {/*</Button>*/}
+                    {/*</Button> */}
                     <Link href="/become-a-member">
                         <Button
                             size="sm"

@@ -29,11 +29,11 @@ export const metadata: Metadata = {
 
     icons: {
         icon: [
-            { url: "/favicon.ico", sizes: "32x32" },
+            { url: "/favicon.svg", sizes: "32x32" },
             { url: "/logo.png", type: "image/png" },
         ],
         apple: "/apple-touch-icon.png",
-        shortcut: "/favicon.ico",
+        shortcut: "/favicon.svg",
     },
     authors: [{ name: "Greater Dinajpur Freelancer Association", url: "https://g-dfa.org" }],
     creator: "Greater Dinajpur Freelancer Association",

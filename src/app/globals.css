@@ -79,7 +79,6 @@
     --gdfa-primary: #050A30;
     --gdfa-secondary: #0A30FF;
     --gdfa-accent: #00AFFF;
-    --gdfa-accent-green: #30FF05;
     --gdfa-neutral-white: #FFFFFF;
     --gdfa-neutral-black: #04092F;
     --gdfa-danger: #050A30;
@@ -120,7 +119,6 @@
     --gdfa-primary: #FFFFFF;
     --gdfa-secondary: #365DFF;
     --gdfa-accent: #00AFFF;
-    --gdfa-accent-green: #30FF05;
     --gdfa-neutral-white: #FFFFFF;
     --gdfa-neutral-black: #050A30;
     --gdfa-danger: #050A30;
@@ -149,10 +147,6 @@
         background-color: var(--gdfa-accent);
     }
 
-    .bg-gdfa-accent-green {
-        background-color: var(--gdfa-accent-green);
-    }
-
     .text-gdfa-primary {
         color: var(--gdfa-primary);
     }
@@ -167,10 +161,6 @@
 
     .text-gdfa-accent {
         color: var(--gdfa-accent);
-    }
-
-    .text-gdfa-accent-green {
-        color: var(--gdfa-accent-green);
     }
 
     .border-gdfa-primary {
