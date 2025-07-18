@@ -1,19 +1,18 @@
 
 import { HeroSection } from "@/components/hero-section"
-// import { AboutSection } from "@/components/about-section"
-// import { ServicesSection } from "@/components/services-section"
-// import { CommunitySection } from "@/components/community-section"
-// import { ContactSection } from "@/components/contact-section"
-// import { Footer } from "@/components/footer"
+import {AboutPreview} from "@/components/about-section";
+import {CommunityBenefits} from "@/components/comunity-benifit-section";
+import {MemberSpotlight} from "@/components/member-spotlight-section";
+import {Testimonials} from "@/components/testimonial-section";
 
 export default function HomePage() {
     return (
         <>
             <HeroSection />
-            {/*<AboutSection />*/}
-            {/*<ServicesSection />*/}
-            {/*<CommunitySection />*/}
-            {/*<ContactSection />*/}
+            <AboutPreview/>
+            <CommunityBenefits/>
+            <MemberSpotlight/>
+            <Testimonials/>
         </>
     )
 }
