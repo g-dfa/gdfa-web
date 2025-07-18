@@ -106,14 +106,26 @@ export function HeroSection() {
                                 </p>
 
                                 <div className="grid grid-cols-2 gap-4 pt-4 text-sm sm:text-base">
-                                    <FeatureCard color="secondary" value="24/7" label="Community Support" />
+                                    <div className={`bg-[var(--gdfa-secondary)/10] rounded-xl p-4`}>
+                                        <div className={`text-xl font-bold text-[var(--gdfa-secondary)]`}>24/7</div>
+                                        <div className={`text-xs font-medium text-[var(--gdfa-secondary)]`}>Community Support</div>
+                                    </div>
                                     {/* Using 'accent' as a placeholder for 'accent-red'. If 'accent-red' is a distinct color,
                                         consider adding it as a new CSS variable. */}
-                                    <FeatureCard color="accent" value="Free" label="Membership" />
+                                    <div className={`bg-[var(--gdfa-accent)/10] rounded-xl p-4`}>
+                                        <div className={`text-xl font-bold text-[var(--gdfa-accent)]`}>Free</div>
+                                        <div className={`text-xs font-medium text-[var(--gdfa-accent)]`}>Membership</div>
+                                    </div>
                                     {/* Using 'accent' as a placeholder for 'accent-green'. If 'accent-green' is a distinct color,
                                         consider adding it as a new CSS variable. */}
-                                    <FeatureCard color="accent" value="50+" label="Skills Covered" />
-                                    <FeatureCard color="primary" value="Local" label="Network" />
+                                    <div className={`bg-[var(--gdfa-accent)/10] rounded-xl p-4`}>
+                                        <div className={`text-xl font-bold text-[var(--gdfa-accent)]`}>50+</div>
+                                        <div className={`text-xs font-medium text-[var(--gdfa-accent)]`}>Skills Covered</div>
+                                    </div>
+                                    <div className={`bg-[var(--gdfa-primary)/10] rounded-xl p-4`}>
+                                        <div className={`text-xl font-bold text-[var(--gdfa-primary)]`}>Local</div>
+                                        <div className={`text-xs font-medium text-[var(--gdfa-primary)]`}>Network</div>
+                                    </div>
                                 </div>
 
                                 <Link href="/become-a-member">
@@ -126,9 +138,29 @@ export function HeroSection() {
                         </div>
 
                         {/* Floating cards (desktop only) */}
-                        <FloatingCard label="Web Dev" short="WD" description="Expert Level" color="secondary" className="hidden sm:block absolute -top-6 -left-6 rotate-12 hover:rotate-6 z-50" />
+                        <div className={`bg-[var(--gdfa-neutral-white)] rounded-2xl p-4 shadow-xl border border-[var(--gdfa-neutral-black)/10] transform transition-transform duration-300 hidden sm:block absolute -top-6 -left-6 rotate-12 hover:rotate-6 z-50`}>
+                            <div className="flex items-center gap-3">
+                                <div className={`w-10 h-10 bg-[var(--gdfa-secondary)/10] rounded-full flex items-center justify-center`}>
+                                    <span className={`text-[var(--gdfa-secondary)] font-bold text-sm`}>WD</span>
+                                </div>
+                                <div>
+                                    <div className="text-sm font-semibold text-[var(--gdfa-neutral-black)]">Web Dev</div>
+                                    <div className="text-xs text-[var(--gdfa-neutral-black)/50]">Expert Level</div>
+                                </div>
+                            </div>
+                        </div>
                         {/* Using 'accent' as a placeholder for 'accent-red' in FloatingCard. */}
-                        <FloatingCard label="Graphics" short="GD" description="Pro Designer" color="accent" className="hidden sm:block absolute -bottom-6 -right-6 -rotate-12 hover:-rotate-6 z-50" />
+                        <div className={`bg-[var(--gdfa-neutral-white)] rounded-2xl p-4 shadow-xl border border-[var(--gdfa-neutral-black)/10] transform transition-transform duration-300 hidden sm:block absolute -bottom-6 -right-6 -rotate-12 hover:-rotate-6 z-50`}>
+                            <div className="flex items-center gap-3">
+                                <div className={`w-10 h-10 bg-[var(--gdfa-accent)/10] rounded-full flex items-center justify-center`}>
+                                    <span className={`text-[var(--gdfa-accent)] font-bold text-sm`}>GD</span>
+                                </div>
+                                <div>
+                                    <div className="text-sm font-semibold text-[var(--gdfa-neutral-black)]">Graphics</div>
+                                    <div className="text-xs text-[var(--gdfa-neutral-black)/50]">Pro Designer</div>
+                                </div>
+                            </div>
+                        </div>
 
                         {/* Background blobs */}
                         {/* Using 'accent' as a placeholder for 'accent-red'. */}
@@ -146,30 +178,5 @@ export function HeroSection() {
                 </svg>
             </div>
         </section>
-    );
-}
-
-function FeatureCard({ color, value, label }) {
-    return (
-        <div className={`bg-[var(--gdfa-${color})/10] rounded-xl p-4`}>
-            <div className={`text-xl font-bold text-[var(--gdfa-${color})]`}>{value}</div>
-            <div className={`text-xs font-medium text-[var(--gdfa-${color})]`}>{label}</div>
-        </div>
-    );
-}
-
-function FloatingCard({ label, short, description, color, className }) {
-    return (
-        <div className={`bg-[var(--gdfa-neutral-white)] rounded-2xl p-4 shadow-xl border border-[var(--gdfa-neutral-black)/10] transform transition-transform duration-300 ${className}`}>
-            <div className="flex items-center gap-3">
-                <div className={`w-10 h-10 bg-[var(--gdfa-${color})/10] rounded-full flex items-center justify-center`}>
-                    <span className={`text-[var(--gdfa-${color})] font-bold text-sm`}>{short}</span>
-                </div>
-                <div>
-                    <div className="text-sm font-semibold text-[var(--gdfa-neutral-black)]">{label}</div>
-                    <div className="text-xs text-[var(--gdfa-neutral-black)/50]">{description}</div>
-                </div>
-            </div>
-        </div>
     );
 }
