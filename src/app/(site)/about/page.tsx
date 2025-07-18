@@ -23,15 +23,6 @@ import {
 import Link from "next/link";
 import { motion } from "framer-motion";
 
-const gdfaColors = {
-  primary: "#050A30",
-  secondary: "#0A30FF",
-  accent: "#00AFFF",
-  neutralWhite: "#FFFFFF",
-  neutralBlack: "#04092F",
-  danger: "#050A30",
-};
-
 const achievements = [
   {
     title: "Top Freelance Hub in Northern Bangladesh",
