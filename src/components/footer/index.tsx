@@ -9,7 +9,7 @@ const footerLinks = {
     ],
     resources: [
         { name: "Blog", href: "/" },
-        { name: "Career Guide", href: "/" },
+        { name: "Career Guide", href: "/career-guide" },
         { name: "FAQ", href: "/faq" },
     ],
     support: [
