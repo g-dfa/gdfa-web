@@ -73,7 +73,7 @@ export function Header() {
                         side="right"
                         className="w-[300px] sm:w-[400px] bg-[var(--gdfa-neutral-white)] text-[var(--gdfa-primary)]"
                     >
-                        <div className="flex flex-col space-y-4 mt-8">
+                        <div className="flex flex-col space-y-4 mt-8 items-center">
                             {navigation.map((item) => (
                                 <Link
                                     key={item.name}
