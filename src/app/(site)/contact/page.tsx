@@ -53,7 +53,7 @@ export default function Contact() {
                                     </div>
                                     <div>
                                         <h4 className="font-semibold text-[var(--gdfa-primary)] mb-1">Email</h4>
-                                        <p className="text-[var(--gdfa-primary)/70]">info@gdfa.org</p>
+                                        <p className="text-[var(--gdfa-primary)/70]">info@g-dfa.org</p>
                                     </div>
                                 </div>
 

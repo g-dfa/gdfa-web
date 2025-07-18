@@ -4,21 +4,20 @@ import { Facebook, Twitter, Linkedin, Instagram, Mail, Phone } from "lucide-reac
 const footerLinks = {
     community: [
         { name: "About Us", href: "/about" },
-        { name: "Our Members", href: "/community" },
         { name: "Events", href: "/events" },
         { name: "Gallery", href: "/gallery" },
     ],
     services: [
-        { name: "Web Development", href: "/services" },
-        { name: "Mobile Apps", href: "/services" },
-        { name: "Design Services", href: "/services" },
-        { name: "Digital Marketing", href: "/services" },
+        { name: "Web Development", href: "/" },
+        { name: "Mobile Apps", href: "/" },
+        { name: "Design Services", href: "/" },
+        { name: "Digital Marketing", href: "/" },
     ],
     resources: [
-        { name: "Blog", href: "/blog" },
-        { name: "Tutorials", href: "/resources" },
-        { name: "Career Guide", href: "/resources" },
-        { name: "FAQ", href: "/faq" },
+        { name: "Blog", href: "/" },
+        { name: "Tutorials", href: "/" },
+        { name: "Career Guide", href: "/" },
+        { name: "FAQ", href: "/" },
     ],
     support: [
         { name: "Contact Us", href: "/contact" },
@@ -125,7 +124,7 @@ export function Footer() {
                     <div className="grid md:grid-cols-2 gap-6">
                         <div className="flex items-center space-x-3">
                             <Mail className="w-5 h-5 text-gdfa-accent" />
-                            <span className="text-gray-300">info@gdfa.org</span>
+                            <span className="text-gray-300">info@g-dfa.org</span>
                         </div>
                         <div className="flex items-center space-x-3">
                             <Phone className="w-5 h-5 text-gdfa-accent" />

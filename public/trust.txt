@@ -1,0 +1,23 @@
+# Organization Details
+entity: https://g-dfa.org
+name: Greater Dinajpur Freelancer Association
+type: organization
+
+# Product Ownership
+owns: https://g-dfa.org
+
+# Product Information
+entity: https://g-dfa.org
+name: GDFA
+type: community
+description: >
+  Empowering local talent, connecting opportunities, and building a thriving freelance community in the Greater Dinajpur region. Join GDFA for skill development, networking, and career growth.
+
+# Authors & Contributors
+author: https://linkedin.com/company/gdfa-official
+
+# Social Media Verification
+social:
+  - https://facebook.com/gdfa.official
+  - https://linkedin.com/company/gdfa-official
+  - https://twitter.com/gdfa_official
