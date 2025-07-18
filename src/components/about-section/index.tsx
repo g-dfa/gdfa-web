@@ -8,25 +8,25 @@ const highlights = [
         icon: Target,
         title: "Our Mission",
         description: "Empowering local talent to compete globally while strengthening our regional economy.",
-        color: "from-[var(--gdfa-secondary)] to-[var(--gdfa-accent-red)]",
+        color: "from-[var(--gdfa-secondary)] to-[var(--gdfa-primary)]/80",
     },
     {
         icon: Users,
         title: "Strong Community",
         description: "500+ active freelancers supporting each other through collaboration and mentorship.",
-        color: "from-[var(--gdfa-accent-red)] to-[var(--gdfa-accent-green)]",
+        color: "from-[var(--gdfa-secondary)] to-[var(--gdfa-primary)]/80",
     },
     {
         icon: Award,
         title: "Proven Success",
         description: "Our members have completed 1000+ projects with an average rating of 4.9 stars.",
-        color: "from-[var(--gdfa-accent-green)] to-[var(--gdfa-secondary)]",
+        color: "from-[var(--gdfa-secondary)] to-[var(--gdfa-primary)]/80",
     },
     {
         icon: Globe,
         title: "Global Reach",
         description: "Connecting Greater Dinajpur talent with opportunities across Bangladesh and beyond.",
-        color: "from-[var(--gdfa-primary)] to-[var(--gdfa-accent-red)]",
+        color: "from-[var(--gdfa-secondary)] to-[var(--gdfa-primary)]/80",
     },
 ]
 
@@ -46,7 +46,7 @@ export function AboutPreview() {
                     <div className="space-y-8">
                         <div>
                             <div
-                                className="inline-flex items-center gap-2 bg-[var(--gdfa-secondary)/10] text-[var(--gdfa-secondary)] rounded-full px-4 py-2 text-sm font-medium mb-6">
+                                className="inline-flex items-center gap-2 bg-blue-100 text-[var(--gdfa-secondary)] rounded-full px-4 py-2 text-sm font-medium mb-6">
                                 <Users className="w-4 h-4"/>
                                 <span>About Our Community</span>
                             </div>
@@ -54,7 +54,7 @@ export function AboutPreview() {
                             <h2 className="text-4xl lg:text-5xl font-bold text-[var(--gdfa-primary)] mb-6 leading-tight">
                                 Building the Future of
                                 <span
-                                    className="block bg-gradient-to-r from-[var(--gdfa-secondary)] to-[var(--gdfa-accent-red)] bg-clip-text text-transparent">
+                                    className="block bg-gradient-to-r from-[var(--gdfa-secondary)] to-[var(--gdfa-)] bg-clip-text text-transparent">
                                   Freelancing in Bangladesh
                                 </span>
                             </h2>

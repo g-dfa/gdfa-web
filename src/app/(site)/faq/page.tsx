@@ -82,7 +82,7 @@ const faqs = [
 export default function FAQ() {
   return (
     <section className="py-24 bg-gray-50">
-      <div className="max-w-6xl px-4 mx-auto w-full">
+      <div className="max-w-6xl px-4 mx-auto">
         <div className="text-center mb-12">
           <div className="inline-flex items-center gap-2 bg-blue-100 text-gdfa-secondary rounded-full px-4 py-2 text-sm font-medium mb-4">
             <HelpCircle className="w-4 h-4" />

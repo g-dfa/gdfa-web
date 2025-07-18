@@ -23,13 +23,15 @@ export function Header() {
     return (
         <header className="sticky top-0 z-50 w-full border-b border-[var(--gdfa-primary)/10] bg-[var(--gdfa-neutral-white)/90] backdrop-blur-md supports-[backdrop-filter]:bg-[var(--gdfa-neutral-white)]/40 flex justify-center">
             <div className="container flex h-16 items-center justify-between px-4">
-                <Image
-                    src="/logo.svg"
-                    alt="GDFA Logo"
-                    width={80}
-                    height={80}
-                    priority
-                />
+                <Link href={'/'}>
+                    <Image
+                        src="/logo.svg"
+                        alt="GDFA Logo"
+                        width={80}
+                        height={80}
+                        priority
+                    />
+                </Link>
 
                 {/* Desktop Navigation */}
                 <nav className="hidden md:flex items-center space-x-6">
