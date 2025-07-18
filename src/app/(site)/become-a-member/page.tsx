@@ -28,7 +28,6 @@ import {
   Check,
   Loader2,
 } from "lucide-react";
-import { motion } from "framer-motion"; // Import motion
 
 // Define the location data structure
 const locations = {
@@ -176,22 +175,11 @@ export default function BecomeMember() {
     return (
       <div className="py-16 lg:py-24">
         <div className="container px-4 mx-auto max-w-2xl">
-          <motion.div
-            className="shadow-lg border-0 bg-gradient-to-br from-white to-blue-50/50"
-            whileHover={{
-              scale: 1.01,
-              boxShadow: "0 10px 20px rgba(0,0,0,0.1)",
-            }}
-            transition={{ duration: 0.2 }}
-          >
+          <Card className="shadow-lg border-0 bg-gradient-to-br from-white to-blue-50/50">
             <CardContent className="p-8 text-center">
-              <motion.div
-                className="w-16 h-16 bg-gradient-to-br from-[var(--gdfa-secondary)] to-[var(--gdfa-accent)] rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg"
-                whileHover={{ rotate: 15, scale: 1.1 }}
-                transition={{ type: "spring", stiffness: 400, damping: 10 }}
-              >
+              <div className="w-16 h-16 bg-gradient-to-br from-[var(--gdfa-secondary)] to-[var(--gdfa-accent)] rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg">
                 <Check className="w-8 h-8 text-white" />
-              </motion.div>
+              </div>
               <h3 className="text-2xl font-bold text-gray-900 mb-3">
                 Registration Successful!
               </h3>
@@ -200,7 +188,7 @@ export default function BecomeMember() {
                 and will get back to you shortly.
               </p>
             </CardContent>
-          </motion.div>
+          </Card>
         </div>
       </div>
     );
@@ -214,14 +202,7 @@ export default function BecomeMember() {
   return (
     <div className="py-16 lg:py-24">
       <div className="container px-4 mx-auto max-w-3xl">
-        <motion.div
-          className="shadow-xl border-0 bg-white/80 backdrop-blur-sm"
-          whileHover={{
-            scale: 1.005,
-            boxShadow: "0 15px 30px rgba(0,0,0,0.15)",
-          }}
-          transition={{ duration: 0.2 }}
-        >
+        <Card className="shadow-xl border-0 bg-white/80 backdrop-blur-sm">
           <CardHeader className="text-center pb-6">
             <CardTitle className="text-3xl lg:text-4xl font-bold text-gray-900 mb-2">
               Become a Member
@@ -242,23 +223,15 @@ export default function BecomeMember() {
                     <User className="inline-block w-4 h-4 mr-2 text-[var(--gdfa-secondary)]" />
                     Full Name
                   </label>
-                  <motion.div
-                    whileHover={{
-                      scale: 1.01,
-                      borderColor: "var(--gdfa-secondary)",
-                    }}
-                    transition={{ duration: 0.1 }}
-                  >
-                    <Input
-                      id="name"
-                      name="name"
-                      placeholder="John Doe"
-                      value={formData.name}
-                      onChange={handleChange}
-                      required
-                      className="border-gray-200 focus:border-[var(--gdfa-secondary)] focus:ring-[var(--gdfa-secondary)]/20"
-                    />
-                  </motion.div>
+                  <Input
+                    id="name"
+                    name="name"
+                    placeholder="John Doe"
+                    value={formData.name}
+                    onChange={handleChange}
+                    required
+                    className="border-gray-200 focus:border-[var(--gdfa-secondary)]focus:ring-gdfa-secondary/20"
+                  />
                 </div>
                 <div>
                   <label
@@ -268,24 +241,16 @@ export default function BecomeMember() {
                     <Mail className="inline-block w-4 h-4 mr-2 text-[var(--gdfa-secondary)]" />
                     Email Address
                   </label>
-                  <motion.div
-                    whileHover={{
-                      scale: 1.01,
-                      borderColor: "var(--gdfa-secondary)",
-                    }}
-                    transition={{ duration: 0.1 }}
-                  >
-                    <Input
-                      id="email"
-                      name="email"
-                      type="email"
-                      placeholder="john.doe@example.com"
-                      value={formData.email}
-                      onChange={handleChange}
-                      required
-                      className="border-gray-200 focus:border-[var(--gdfa-secondary)] focus:ring-[var(--gdfa-secondary)]/20"
-                    />
-                  </motion.div>
+                  <Input
+                    id="email"
+                    name="email"
+                    type="email"
+                    placeholder="john.doe@example.com"
+                    value={formData.email}
+                    onChange={handleChange}
+                    required
+                    className="border-gray-200 focus:border-[var(--gdfa-secondary)] focus:ring-[var(--gdfa-secondary)]/20"
+                  />
                 </div>
               </div>
 
@@ -298,24 +263,16 @@ export default function BecomeMember() {
                     <Phone className="inline-block w-4 h-4 mr-2 text-[var(--gdfa-secondary)]" />
                     Phone Number
                   </label>
-                  <motion.div
-                    whileHover={{
-                      scale: 1.01,
-                      borderColor: "var(--gdfa-secondary)",
-                    }}
-                    transition={{ duration: 0.1 }}
-                  >
-                    <Input
-                      id="phone"
-                      name="phone"
-                      type="tel"
-                      placeholder="+880 1XXXXXXXX"
-                      value={formData.phone}
-                      onChange={handleChange}
-                      required
-                      className="border-gray-200 focus:border-[var(--gdfa-secondary)] focus:ring-[var(--gdfa-secondary)]20"
-                    />
-                  </motion.div>
+                  <Input
+                    id="phone"
+                    name="phone"
+                    type="tel"
+                    placeholder="+880 1XXXXXXXX"
+                    value={formData.phone}
+                    onChange={handleChange}
+                    required
+                    className="border-gray-200 focus:border-[var(--gdfa-secondary)] focus:ring-[var(--gdfa-secondary)]20"
+                  />
                 </div>
                 <div>
                   <label
@@ -325,30 +282,25 @@ export default function BecomeMember() {
                     <Droplet className="inline-block w-4 h-4 mr-2 text-[var(--gdfa-secondary)]" />
                     Blood Group
                   </label>
-                  <motion.div
-                    whileHover={{ scale: 1.01 }}
-                    transition={{ duration: 0.1 }}
+                  <Select
+                    value={formData.bloodGroup}
+                    onValueChange={handleBloodGroupSelectChange}
+                    required
                   >
-                    <Select
-                      value={formData.bloodGroup}
-                      onValueChange={handleBloodGroupSelectChange}
-                      required
+                    <SelectTrigger
+                      id="bloodGroup"
+                      className="w-full border-gray-200 focus:ring-[var(--gdfa-secondary)]/20"
                     >
-                      <SelectTrigger
-                        id="bloodGroup"
-                        className="w-full border-gray-200 focus:ring-[var(--gdfa-secondary)]/20"
-                      >
-                        <SelectValue placeholder="Select your blood group" />
-                      </SelectTrigger>
-                      <SelectContent>
-                        {bloodGroups.map((group) => (
-                          <SelectItem key={group} value={group}>
-                            {group}
-                          </SelectItem>
-                        ))}
-                      </SelectContent>
-                    </Select>
-                  </motion.div>
+                      <SelectValue placeholder="Select your blood group" />
+                    </SelectTrigger>
+                    <SelectContent>
+                      {bloodGroups.map((group) => (
+                        <SelectItem key={group} value={group}>
+                          {group}
+                        </SelectItem>
+                      ))}
+                    </SelectContent>
+                  </Select>
                 </div>
               </div>
 
@@ -366,23 +318,15 @@ export default function BecomeMember() {
                     >
                       Address Line 1
                     </label>
-                    <motion.div
-                      whileHover={{
-                        scale: 1.01,
-                        borderColor: "var(--gdfa-secondary)",
-                      }}
-                      transition={{ duration: 0.1 }}
-                    >
-                      <Input
-                        id="presentAddress.address_line_1"
-                        name="presentAddress.address_line_1"
-                        placeholder="House No., Street Name"
-                        value={formData.presentAddress.address_line_1}
-                        onChange={handleChange}
-                        required
-                        className="border-gray-200 focus:border-gdfa-[var(--gdfa-secondary)] focus:ring-[var(--gdfa-secondary)]/20"
-                      />
-                    </motion.div>
+                    <Input
+                      id="presentAddress.address_line_1"
+                      name="presentAddress.address_line_1"
+                      placeholder="House No., Street Name"
+                      value={formData.presentAddress.address_line_1}
+                      onChange={handleChange}
+                      required
+                      className="border-gray-200 focus:border-gdfa-[var(--gdfa-secondary)] focus:ring-[var(--gdfa-secondary)]/20"
+                    />
                   </div>
                   <div>
                     <label
@@ -391,22 +335,14 @@ export default function BecomeMember() {
                     >
                       Address Line 2 (Optional)
                     </label>
-                    <motion.div
-                      whileHover={{
-                        scale: 1.01,
-                        borderColor: "var(--gdfa-secondary)",
-                      }}
-                      transition={{ duration: 0.1 }}
-                    >
-                      <Input
-                        id="presentAddress.address_line_2"
-                        name="presentAddress.address_line_2"
-                        placeholder="Apartment, Suite, etc."
-                        value={formData.presentAddress.address_line_2}
-                        onChange={handleChange}
-                        className="border-gray-200 focus:border-[var(--gdfa-secondary)] focus:ring-[var(--gdfa-secondary)]/20"
-                      />
-                    </motion.div>
+                    <Input
+                      id="presentAddress.address_line_2"
+                      name="presentAddress.address_line_2"
+                      placeholder="Apartment, Suite, etc."
+                      value={formData.presentAddress.address_line_2}
+                      onChange={handleChange}
+                      className="border-gray-200 focus:border-[var(--gdfa-secondary)] focus:ring-[var(--gdfa-secondary)]/20"
+                    />
                   </div>
                 </div>
                 <div className="grid md:grid-cols-3 gap-6">
@@ -417,37 +353,32 @@ export default function BecomeMember() {
                     >
                       Division
                     </label>
-                    <motion.div
-                      whileHover={{ scale: 1.01 }}
-                      transition={{ duration: 0.1 }}
+                    <Select
+                      value={formData.presentAddress.division}
+                      onValueChange={(value) =>
+                        handleAddressSelectChange(
+                          value,
+                          "division",
+                          "presentAddress"
+                        )
+                      }
+                      required
+                      disabled
                     >
-                      <Select
-                        value={formData.presentAddress.division}
-                        onValueChange={(value) =>
-                          handleAddressSelectChange(
-                            value,
-                            "division",
-                            "presentAddress"
-                          )
-                        }
-                        required
-                        disabled
+                      <SelectTrigger
+                        id="presentAddress.division"
+                        className="w-full border-gray-200 focus:ring-[var(--gdfa-secondary)]/20"
                       >
-                        <SelectTrigger
-                          id="presentAddress.division"
-                          className="w-full border-gray-200 focus:ring-[var(--gdfa-secondary)]/20"
-                        >
-                          <SelectValue placeholder="Select Division" />
-                        </SelectTrigger>
-                        <SelectContent>
-                          {divisions.map((div) => (
-                            <SelectItem key={div} value={div}>
-                              {div}
-                            </SelectItem>
-                          ))}
-                        </SelectContent>
-                      </Select>
-                    </motion.div>
+                        <SelectValue placeholder="Select Division" />
+                      </SelectTrigger>
+                      <SelectContent>
+                        {divisions.map((div) => (
+                          <SelectItem key={div} value={div}>
+                            {div}
+                          </SelectItem>
+                        ))}
+                      </SelectContent>
+                    </Select>
                   </div>
                   <div>
                     <label
@@ -456,36 +387,31 @@ export default function BecomeMember() {
                     >
                       District
                     </label>
-                    <motion.div
-                      whileHover={{ scale: 1.01 }}
-                      transition={{ duration: 0.1 }}
+                    <Select
+                      value={formData.presentAddress.district}
+                      onValueChange={(value) =>
+                        handleAddressSelectChange(
+                          value,
+                          "district",
+                          "presentAddress"
+                        )
+                      }
+                      required
                     >
-                      <Select
-                        value={formData.presentAddress.district}
-                        onValueChange={(value) =>
-                          handleAddressSelectChange(
-                            value,
-                            "district",
-                            "presentAddress"
-                          )
-                        }
-                        required
+                      <SelectTrigger
+                        id="presentAddress.district"
+                        className="w-full border-gray-200 focus:ring-[var(--gdfa-secondary)]/20"
                       >
-                        <SelectTrigger
-                          id="presentAddress.district"
-                          className="w-full border-gray-200 focus:ring-[var(--gdfa-secondary)]/20"
-                        >
-                          <SelectValue placeholder="Select District" />
-                        </SelectTrigger>
-                        <SelectContent>
-                          {districts.map((dist) => (
-                            <SelectItem key={dist} value={dist}>
-                              {dist}
-                            </SelectItem>
-                          ))}
-                        </SelectContent>
-                      </Select>
-                    </motion.div>
+                        <SelectValue placeholder="Select District" />
+                      </SelectTrigger>
+                      <SelectContent>
+                        {districts.map((dist) => (
+                          <SelectItem key={dist} value={dist}>
+                            {dist}
+                          </SelectItem>
+                        ))}
+                      </SelectContent>
+                    </Select>
                   </div>
                   <div>
                     <label
@@ -494,41 +420,36 @@ export default function BecomeMember() {
                     >
                       Upazila
                     </label>
-                    <motion.div
-                      whileHover={{ scale: 1.01 }}
-                      transition={{ duration: 0.1 }}
+                    <Select
+                      value={formData.presentAddress.upazila}
+                      onValueChange={(value) =>
+                        handleAddressSelectChange(
+                          value,
+                          "upazila",
+                          "presentAddress"
+                        )
+                      }
+                      required
+                      disabled={!formData.presentAddress.district}
                     >
-                      <Select
-                        value={formData.presentAddress.upazila}
-                        onValueChange={(value) =>
-                          handleAddressSelectChange(
-                            value,
-                            "upazila",
-                            "presentAddress"
-                          )
-                        }
-                        required
-                        disabled={!formData.presentAddress.district}
+                      <SelectTrigger
+                        id="presentAddress.upazila"
+                        className="w-full border-gray-200 focus:ring-[var(--gdfa-secondary)]/20"
                       >
-                        <SelectTrigger
-                          id="presentAddress.upazila"
-                          className="w-full border-gray-200 focus:ring-[var(--gdfa-secondary)]/20"
-                        >
-                          <SelectValue placeholder="Select Upazila" />
-                        </SelectTrigger>
-                        <SelectContent>
-                          {formData.presentAddress.district &&
-                            locations.Rangpur[
-                              formData.presentAddress
-                                .district as keyof typeof locations.Rangpur
-                            ]?.map((upazila) => (
-                              <SelectItem key={upazila} value={upazila}>
-                                {upazila}
-                              </SelectItem>
-                            ))}
-                        </SelectContent>
-                      </Select>
-                    </motion.div>
+                        <SelectValue placeholder="Select Upazila" />
+                      </SelectTrigger>
+                      <SelectContent>
+                        {formData.presentAddress.district &&
+                          locations.Rangpur[
+                            formData.presentAddress
+                              .district as keyof typeof locations.Rangpur
+                          ]?.map((upazila) => (
+                            <SelectItem key={upazila} value={upazila}>
+                              {upazila}
+                            </SelectItem>
+                          ))}
+                      </SelectContent>
+                    </Select>
                   </div>
                 </div>
                 <div className="grid md:grid-cols-2 gap-6">
@@ -539,22 +460,14 @@ export default function BecomeMember() {
                     >
                       Postal Code
                     </label>
-                    <motion.div
-                      whileHover={{
-                        scale: 1.01,
-                        borderColor: "var(--gdfa-secondary)",
-                      }}
-                      transition={{ duration: 0.1 }}
-                    >
-                      <Input
-                        id="presentAddress.postal_code"
-                        name="presentAddress.postal_code"
-                        placeholder="e.g., 5200"
-                        value={formData.presentAddress.postal_code}
-                        onChange={handleChange}
-                        className="border-gray-200 focus:border-[var(--gdfa-secondary)] focus:ring-[var(--gdfa-secondary)]/20"
-                      />
-                    </motion.div>
+                    <Input
+                      id="presentAddress.postal_code"
+                      name="presentAddress.postal_code"
+                      placeholder="e.g., 5200"
+                      value={formData.presentAddress.postal_code}
+                      onChange={handleChange}
+                      className="border-gray-200 focus:border-[var(--gdfa-secondary)] focus:ring-[var(--gdfa-secondary)]/20"
+                    />
                   </div>
                   <div>
                     <label
@@ -563,37 +476,32 @@ export default function BecomeMember() {
                     >
                       Country
                     </label>
-                    <motion.div
-                      whileHover={{ scale: 1.01 }}
-                      transition={{ duration: 0.1 }}
+                    <Select
+                      value={formData.presentAddress.country}
+                      onValueChange={(value) =>
+                        handleAddressSelectChange(
+                          value,
+                          "country",
+                          "presentAddress"
+                        )
+                      }
+                      required
+                      disabled
                     >
-                      <Select
-                        value={formData.presentAddress.country}
-                        onValueChange={(value) =>
-                          handleAddressSelectChange(
-                            value,
-                            "country",
-                            "presentAddress"
-                          )
-                        }
-                        required
-                        disabled
+                      <SelectTrigger
+                        id="presentAddress.country"
+                        className="w-full border-gray-200 focus:ring-[var(--gdfa-secondary)]/20"
                       >
-                        <SelectTrigger
-                          id="presentAddress.country"
-                          className="w-full border-gray-200 focus:ring-[var(--gdfa-secondary)]/20"
-                        >
-                          <SelectValue placeholder="Select Country" />
-                        </SelectTrigger>
-                        <SelectContent>
-                          {countries.map((country) => (
-                            <SelectItem key={country} value={country}>
-                              {country}
-                            </SelectItem>
-                          ))}
-                        </SelectContent>
-                      </Select>
-                    </motion.div>
+                        <SelectValue placeholder="Select Country" />
+                      </SelectTrigger>
+                      <SelectContent>
+                        {countries.map((country) => (
+                          <SelectItem key={country} value={country}>
+                            {country}
+                          </SelectItem>
+                        ))}
+                      </SelectContent>
+                    </Select>
                   </div>
                 </div>
               </div>
@@ -605,16 +513,11 @@ export default function BecomeMember() {
                   Permanent Address
                 </h3>
                 <div className="flex items-center space-x-2 mb-4">
-                  <motion.div
-                    whileHover={{ scale: 1.05 }}
-                    transition={{ duration: 0.1 }}
-                  >
-                    <Checkbox
-                      id="sameAsPresent"
-                      checked={isSameAsPresentAddress}
-                      onCheckedChange={handleSameAsPresentAddressChange}
-                    />
-                  </motion.div>
+                  <Checkbox
+                    id="sameAsPresent"
+                    checked={isSameAsPresentAddress}
+                    onCheckedChange={handleSameAsPresentAddressChange}
+                  />
                   <label
                     htmlFor="sameAsPresent"
                     className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
@@ -639,23 +542,15 @@ export default function BecomeMember() {
                         className="border-gray-200 focus:border-[var(--gdfa-secondary)] focus:ring-[var(--gdfa-secondary)]/20"
                       />
                     ) : (
-                      <motion.div
-                        whileHover={{
-                          scale: 1.01,
-                          borderColor: "var(--gdfa-secondary)",
-                        }}
-                        transition={{ duration: 0.1 }}
-                      >
-                        <Input
-                          id="permanentAddress.address_line_1"
-                          name="permanentAddress.address_line_1"
-                          placeholder="House No., Street Name"
-                          value={formData.permanentAddress.address_line_1}
-                          onChange={handleChange}
-                          required
-                          className="border-gray-200 focus:border-[var(--gdfa-secondary)]focus:ring-[var(--gdfa-secondary)]/20"
-                        />
-                      </motion.div>
+                      <Input
+                        id="permanentAddress.address_line_1"
+                        name="permanentAddress.address_line_1"
+                        placeholder="House No., Street Name"
+                        value={formData.permanentAddress.address_line_1}
+                        onChange={handleChange}
+                        required
+                        className="border-gray-200 focus:border-[var(--gdfa-secondary)]focus:ring-[var(--gdfa-secondary)]/20"
+                      />
                     )}
                   </div>
                   <div>
@@ -674,22 +569,14 @@ export default function BecomeMember() {
                         className="border-gray-200 focus:border-[var(--gdfa-secondary)] focus:ring-[var(--gdfa-secondary)]/20"
                       />
                     ) : (
-                      <motion.div
-                        whileHover={{
-                          scale: 1.01,
-                          borderColor: "var(--gdfa-secondary)",
-                        }}
-                        transition={{ duration: 0.1 }}
-                      >
-                        <Input
-                          id="permanentAddress.address_line_2"
-                          name="permanentAddress.address_line_2"
-                          placeholder="Apartment, Suite, etc."
-                          value={formData.permanentAddress.address_line_2}
-                          onChange={handleChange}
-                          className="border-gray-200 focus:border-[var(--gdfa-secondary)] focus:ring-[var(--gdfa-secondary)]/20"
-                        />
-                      </motion.div>
+                      <Input
+                        id="permanentAddress.address_line_2"
+                        name="permanentAddress.address_line_2"
+                        placeholder="Apartment, Suite, etc."
+                        value={formData.permanentAddress.address_line_2}
+                        onChange={handleChange}
+                        className="border-gray-200 focus:border-[var(--gdfa-secondary)] focus:ring-[var(--gdfa-secondary)]/20"
+                      />
                     )}
                   </div>
                 </div>
@@ -701,37 +588,32 @@ export default function BecomeMember() {
                     >
                       Division
                     </label>
-                    <motion.div
-                      whileHover={{ scale: 1.01 }}
-                      transition={{ duration: 0.1 }}
+                    <Select
+                      value={formData.permanentAddress.division}
+                      onValueChange={(value) =>
+                        handleAddressSelectChange(
+                          value,
+                          "division",
+                          "permanentAddress"
+                        )
+                      }
+                      required
+                      disabled // Division is fixed to Rangpur
                     >
-                      <Select
-                        value={formData.permanentAddress.division}
-                        onValueChange={(value) =>
-                          handleAddressSelectChange(
-                            value,
-                            "division",
-                            "permanentAddress"
-                          )
-                        }
-                        required
-                        disabled // Division is fixed to Rangpur
+                      <SelectTrigger
+                        id="permanentAddress.division"
+                        className="w-full border-gray-200 focus:ring-[var(--gdfa-secondary)]/20"
                       >
-                        <SelectTrigger
-                          id="permanentAddress.division"
-                          className="w-full border-gray-200 focus:ring-[var(--gdfa-secondary)]/20"
-                        >
-                          <SelectValue placeholder="Select Division" />
-                        </SelectTrigger>
-                        <SelectContent>
-                          {divisions.map((div) => (
-                            <SelectItem key={div} value={div}>
-                              {div}
-                            </SelectItem>
-                          ))}
-                        </SelectContent>
-                      </Select>
-                    </motion.div>
+                        <SelectValue placeholder="Select Division" />
+                      </SelectTrigger>
+                      <SelectContent>
+                        {divisions.map((div) => (
+                          <SelectItem key={div} value={div}>
+                            {div}
+                          </SelectItem>
+                        ))}
+                      </SelectContent>
+                    </Select>
                   </div>
                   <div>
                     <label
@@ -749,36 +631,32 @@ export default function BecomeMember() {
                         className="border-gray-200 focus:border-[var(--gdfa-secondary)] focus:ring-[var(--gdfa-secondary)]/20"
                       />
                     ) : (
-                      <motion.div
-                        whileHover={{ scale: 1.01 }}
-                        transition={{ duration: 0.1 }}
+                      <Select
+                        value={formData.permanentAddress.district}
+                        onValueChange={(value) =>
+                          handleAddressSelectChange(
+                            value,
+                            "district",
+                            "permanentAddress"
+                          )
+                        }
+                        required
+                        // disabled={!formData.permanentAddress.district}
                       >
-                        <Select
-                          value={formData.permanentAddress.district}
-                          onValueChange={(value) =>
-                            handleAddressSelectChange(
-                              value,
-                              "district",
-                              "permanentAddress"
-                            )
-                          }
-                          required
+                        <SelectTrigger
+                          id="permanentAddress.district"
+                          className="w-full border-gray-200 focus:ring-[var(--gdfa-secondary)]/20"
                         >
-                          <SelectTrigger
-                            id="permanentAddress.district"
-                            className="w-full border-gray-200 focus:ring-[var(--gdfa-secondary)]/20"
-                          >
-                            <SelectValue placeholder="Select District" />
-                          </SelectTrigger>
-                          <SelectContent>
-                            {districts.map((dist) => (
-                              <SelectItem key={dist} value={dist}>
-                                {dist}
-                              </SelectItem>
-                            ))}
-                          </SelectContent>
-                        </Select>
-                      </motion.div>
+                          <SelectValue placeholder="Select District" />
+                        </SelectTrigger>
+                        <SelectContent>
+                          {districts.map((dist) => (
+                            <SelectItem key={dist} value={dist}>
+                              {dist}
+                            </SelectItem>
+                          ))}
+                        </SelectContent>
+                      </Select>
                     )}
                   </div>
                   <div>
@@ -797,40 +675,36 @@ export default function BecomeMember() {
                         className="border-gray-200 focus:border-[var(--gdfa-secondary)] focus:ring-[var(--gdfa-secondary)]/20"
                       />
                     ) : (
-                      <motion.div
-                        whileHover={{ scale: 1.01 }}
-                        transition={{ duration: 0.1 }}
+                      <Select
+                        value={formData.permanentAddress.upazila}
+                        onValueChange={(value) =>
+                          handleAddressSelectChange(
+                            value,
+                            "upazila",
+                            "permanentAddress"
+                          )
+                        }
+                        required
+                        // disabled={!formData.permanentAddress.upazila}
                       >
-                        <Select
-                          value={formData.permanentAddress.upazila}
-                          onValueChange={(value) =>
-                            handleAddressSelectChange(
-                              value,
-                              "upazila",
-                              "permanentAddress"
-                            )
-                          }
-                          required
+                        <SelectTrigger
+                          id="permanentAddress.upazila"
+                          className="w-full border-gray-200 focus:ring-[var(--gdfa-secondary)]/20"
                         >
-                          <SelectTrigger
-                            id="permanentAddress.upazila"
-                            className="w-full border-gray-200 focus:ring-[var(--gdfa-secondary)]/20"
-                          >
-                            <SelectValue placeholder="Select Upazila" />
-                          </SelectTrigger>
-                          <SelectContent>
-                            {formData.permanentAddress.district &&
-                              locations.Rangpur[
-                                formData.permanentAddress
-                                  .district as keyof typeof locations.Rangpur
-                              ]?.map((upazila) => (
-                                <SelectItem key={upazila} value={upazila}>
-                                  {upazila}
-                                </SelectItem>
-                              ))}
-                          </SelectContent>
-                        </Select>
-                      </motion.div>
+                          <SelectValue placeholder="Select Upazila" />
+                        </SelectTrigger>
+                        <SelectContent>
+                          {formData.permanentAddress.district &&
+                            locations.Rangpur[
+                              formData.permanentAddress
+                                .district as keyof typeof locations.Rangpur
+                            ]?.map((upazila) => (
+                              <SelectItem key={upazila} value={upazila}>
+                                {upazila}
+                              </SelectItem>
+                            ))}
+                        </SelectContent>
+                      </Select>
                     )}
                   </div>
                 </div>
@@ -851,22 +725,14 @@ export default function BecomeMember() {
                         className="border-gray-200 focus:border-[var(--gdfa-secondary)] focus:ring-[var(--gdfa-secondary)]/20"
                       />
                     ) : (
-                      <motion.div
-                        whileHover={{
-                          scale: 1.01,
-                          borderColor: "var(--gdfa-secondary)",
-                        }}
-                        transition={{ duration: 0.1 }}
-                      >
-                        <Input
-                          id="permanentAddress.postal_code"
-                          name="permanentAddress.postal_code"
-                          placeholder="e.g., 5200"
-                          value={formData.permanentAddress.postal_code}
-                          onChange={handleChange}
-                          className="border-gray-200 focus:border-[var(--gdfa-secondary)] focus:ring-[var(--gdfa-secondary)]/20"
-                        />
-                      </motion.div>
+                      <Input
+                        id="permanentAddress.postal_code"
+                        name="permanentAddress.postal_code"
+                        placeholder="e.g., 5200"
+                        value={formData.permanentAddress.postal_code}
+                        onChange={handleChange}
+                        className="border-gray-200 focus:border-[var(--gdfa-secondary)] focus:ring-[var(--gdfa-secondary)]/20"
+                      />
                     )}
                   </div>
                   <div>
@@ -876,61 +742,53 @@ export default function BecomeMember() {
                     >
                       Country
                     </label>
-                    <motion.div
-                      whileHover={{ scale: 1.01 }}
-                      transition={{ duration: 0.1 }}
+                    <Select
+                      value={formData.permanentAddress.country}
+                      onValueChange={(value) =>
+                        handleAddressSelectChange(
+                          value,
+                          "country",
+                          "permanentAddress"
+                        )
+                      }
+                      required
+                      disabled
                     >
-                      <Select
-                        value={formData.permanentAddress.country}
-                        onValueChange={(value) =>
-                          handleAddressSelectChange(
-                            value,
-                            "country",
-                            "permanentAddress"
-                          )
-                        }
-                        required
-                        disabled
+                      <SelectTrigger
+                        id="permanentAddress.country"
+                        className="w-full border-gray-200 focus:ring-[var(--gdfa-secondary)]/20"
                       >
-                        <SelectTrigger
-                          id="permanentAddress.country"
-                          className="w-full border-gray-200 focus:ring-[var(--gdfa-secondary)]/20"
-                        >
-                          <SelectValue placeholder="Select Country" />
-                        </SelectTrigger>
-                        <SelectContent>
-                          {countries.map((country) => (
-                            <SelectItem key={country} value={country}>
-                              {country}
-                            </SelectItem>
-                          ))}
-                        </SelectContent>
-                      </Select>
-                    </motion.div>
+                        <SelectValue placeholder="Select Country" />
+                      </SelectTrigger>
+                      <SelectContent>
+                        {countries.map((country) => (
+                          <SelectItem key={country} value={country}>
+                            {country}
+                          </SelectItem>
+                        ))}
+                      </SelectContent>
+                    </Select>
                   </div>
                 </div>
               </div>
 
-              <motion.button
+              <Button
                 type="submit"
                 disabled={isSubmitting}
-                className="w-full h-12 bg-gradient-to-r from-[var(--gdfa-secondary)] to-[var(--gdfa-accent)] hover:from-gdfa-primary hover:to-[var(--gdfa-secondary)] text-white shadow-lg hover:shadow-xl transform transition-all duration-300 text-lg rounded-lg"
-                whileHover={{ scale: 1.01 }} // Subtle scale for the button
-                whileTap={{ scale: 0.99 }} // Slight squash on tap
-                transition={{ type: "spring", stiffness: 400, damping: 17 }}
+                className="w-full h-12 bg-gradient-to-r from-[var(--gdfa-secondary)] to-[var(--gdfa-accent)] hover:from-gdfa-primary hover:to-[var(--gdfa-secondary)] text-white shadow-lg hover:shadow-xl transform hover:scale-[1.005] transition-all duration-300 text-lg rounded-lg"
               >
                 {isSubmitting ? (
-                  <div className="flex items-center gap-2 justify-center">
+                  <div className="flex items-center gap-2">
                     <Loader2 className="w-5 h-5 animate-spin" />
                     <span>Submitting...</span>
                   </div>
                 ) : (
                   <span>Register Now</span>
                 )}
-              </motion.button>
+              </Button>
             </form>
           </CardContent>
-        </motion.div>
+        </Card>
       </div>
     </div>
   );
