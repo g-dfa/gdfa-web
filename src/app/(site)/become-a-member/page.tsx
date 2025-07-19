@@ -28,6 +28,7 @@ import {
   Check,
   Loader2,
 } from "lucide-react";
+import useApi from "@/hooks/use-api";
 
 // Define the location data structure
 const locations = {
@@ -140,36 +141,62 @@ export default function BecomeMember() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    // Simulate API call
-    await new Promise((resolve) => setTimeout(resolve, 2000));
-    setIsSubmitting(false);
-    setIsSubmitted(true);
 
-    setFormData({
-      name: "",
-      email: "",
-      phone: "",
-      bloodGroup: "",
-      presentAddress: {
-        address_line_1: "",
-        address_line_2: "",
-        upazila: "",
-        district: "",
-        division: "Rangpur",
-        postal_code: "",
-        country: "Bangladesh",
-      },
-      permanentAddress: {
-        address_line_1: "",
-        address_line_2: "",
-        upazila: "",
-        district: "",
-        division: "Rangpur",
-        postal_code: "",
-        country: "Bangladesh",
-      },
-    });
+    try {
+      const response = await useApi.post("/auth/register", {
+        name: formData.name,
+        email: formData.email,
+        password: "secret123",
+        password_confirmation: "secret123",
+        blood_group: formData.bloodGroup,
+        phone: formData.phone,
+
+        permanent_address_line_1: formData.permanentAddress.address_line_1,
+        permanent_address_line_2: formData.permanentAddress.address_line_2,
+        permanent_upazila: formData.permanentAddress.upazila,
+        permanent_district: formData.permanentAddress.district,
+        permanent_division: formData.permanentAddress.division,
+        permanent_postal_code: formData.permanentAddress.postal_code,
+        permanent_country: formData.permanentAddress.country,
+
+        present_address_line_1: formData.presentAddress.address_line_1,
+        present_address_line_2: formData.presentAddress.address_line_2,
+        present_upazila: formData.presentAddress.upazila,
+        present_district: formData.presentAddress.district,
+        present_division: formData.presentAddress.division,
+        present_postal_code: formData.presentAddress.postal_code,
+        present_country: formData.presentAddress.country,
+      }, {
+        headers: {
+          "Content-Type": "application/json",
+        },
+      });
+
+      console.log("API Success:", response.data);
+
+      setIsSubmitting(false);
+      setIsSubmitted(true);
+
+      setFormData({
+        name: "",
+        email: "",
+        phone: "",
+        bloodGroup: "",
+        presentAddress: initialAddressState,
+        permanentAddress: initialAddressState,
+      });
+    } catch (error: unknown) {
+      const axiosError = error as import("axios").AxiosError;
+      console.error("API Error:", axiosError.response?.data || axiosError.message);
+      // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+      // @ts-expect-error
+      alert(axiosError.response?.data?.message || "Something went wrong. Please try again.");
+      setIsSubmitting(false);
+    }
+
   };
+
+
 
   if (isSubmitted) {
     return (
